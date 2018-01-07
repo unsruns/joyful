@@ -1,7 +1,7 @@
 <?php
 namespace AppBundle\Controller;
 
-use Symfony\Component\HttpFoundation\Response;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\Routing\Annotation\Route;
 
 
@@ -9,14 +9,16 @@ use Symfony\Component\Routing\Annotation\Route;
  * Class GenusController
  * @package AppBundle\Controller
  */
-class GenusController
+class GenusController extends Controller
 {
     /**
      * @Route("/genus/{genusName}")
      */
     public function showAction($genusName)
     {
-        return new Response('The genus : '.$genusName);
+        return $this->render('genus/show.html.twig',[
+            'name'      =>      $genusName
+        ]);
     }
 
 }
