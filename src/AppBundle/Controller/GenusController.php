@@ -16,8 +16,14 @@ class GenusController extends Controller
      */
     public function showAction($genusName)
     {
+        $notes      =       [   'Lorem ipsum dolor sit amet, consectetur adipisicing elit.',
+                                'Accusamus aspernatur commodi cumque deleniti doloremque ea',
+                                ' reprehenderit sequi vitae, voluptate voluptates voluptatibus?'];
+
         return $this->render('genus/show.html.twig',[
-            'name'      =>      $genusName
+            'name'      =>      $genusName,
+            'notes'     =>      $notes
+
         ]);
     }
 

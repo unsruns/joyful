@@ -1,1 +1,8 @@
 <h1>The genus {{ name }}</h1>
+
+
+<ul>
+    {% for note in notes %}
+        <li>{{ note | upper }}</li>
+    {% endfor %}
+</ul>
